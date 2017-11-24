@@ -1,0 +1,83 @@
+@font-face {
+  font-family: ClearSans;
+  src: url("clearsans.tff")
+}
+
+html, button, input, select, textarea,
+.pure-g [class *= "pure-u"] {
+    font-family: ClearSans;
+    line-height: 1.5;
+}
+
+.error-banner-wrapper {
+  background-color: #050B10;
+  color: #fff;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  padding-left: 3em;
+  padding-right: 3em;
+}
+.error-banner {
+  width: 100%;
+  /* text-align: center; */
+}
+.error-banner-exit {
+  position: absolute;
+  right: 10px;
+}
+
+body {
+  background-color: #0f1418;
+  font-family : ClearSans !important;
+  line-height :1.5;
+}
+
+div.template {
+  display : none;
+}
+
+.spacer {
+  height : 10%;
+}
+
+.masthead {
+  position: fixed;
+  bottom: 0;
+  margin: auto;
+  width: 100%;
+  padding: 1em;
+  text-align: center;
+}
+
+.wrapper {
+  background-color: #050B10;
+  color: #fff;
+  border-radius: 10px;
+  padding: 2em;
+}
+
+.masthead, .header, .footer {
+  background-color: #050B10;
+  color : #fff;
+}
+
+.submit {
+  background: #0f1418 !important;
+}
+
+.subject-box, .email-box, .tripcode-box {
+}
+
+.site-body {
+  margin: auto;
+  width: 80%;
+  padding: 10px;
+  text-align: center;
+}
+
+.header, .footer {
+  margin: auto;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+}

@@ -1,0 +1,78 @@
+fieldset.pure-group {
+  margin: inherit;
+  text-align: center;
+}
+
+textarea.black, input.black {
+  background-color: #0f1418;
+}
+
+textarea.reply-box {
+  resize: vertical;
+}
+
+.pure-button-primary {
+  background-color: #0f1418;
+}
+
+.new-thread-anchor, .thread-preview, .empty-board {
+  background-color: #050B10;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.empty-board {
+  text-align: center;
+}
+
+.new-thread-anchor, .empty-board {
+  padding: 2em;
+}
+
+.thread-preview {
+  padding: 1em;
+  overflow-wrap: break-word;
+  white-space: -moz-pre-wrap !important;
+  white-space: -o-pre-wrap;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  white-space: -webkit-pre-wrap;
+  word-break: break-all;
+  white-space: normal;
+}
+.thread-preview:hover {
+  background-color: #0e1f2d !important;
+}
+
+.thread-preview [class*="thread-preview"] {
+  color: #40474E;
+}
+.thread-preview-subject {
+  color: #A0AAAE !important;
+}
+.thread-preview-content {
+  color: #ffffff !important;
+}
+.thread-preview-timestamp {
+  padding-bottom: 1em;
+  border-bottom: 1px solid  #40474E;
+}
+
+.thread-preview-replies {
+  font-style: italic;
+}
+
+.thread-preview-body {
+  text-align: left;
+  overflow-wrap: break-word;
+}
+
+.thread-preview-content {
+  white-space: -moz-pre-wrap !important;
+  white-space: -o-pre-wrap;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  white-space: -webkit-pre-wrap;
+  word-break: break-all;
+  white-space: normal;
+}

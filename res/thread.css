@@ -1,0 +1,48 @@
+.reply-anchor, .thread-preview, .op-box, .post-box {
+  background-color: #050B10;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.reply-anchor {
+  padding: 2em;
+}
+
+fieldset.pure-group {
+  margin: inherit;
+  text-align: center;
+}
+
+textarea.black, input.black {
+  background-color: #0f1418;
+}
+
+textarea.reply-box {
+  resize: vertical;
+}
+
+.post-box-wrapper {
+  padding-top: 2em;
+}
+
+.op-box, .post-box {
+  padding: 2em;
+  text-align: left;
+}
+.op-box-header, .post-box-header {
+  text-align: center;
+  padding-bottom: 1em;
+  border-bottom: solid 1px;
+}
+.op-header-subject, .post-header-subject {
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+}
+.op-body-content, .post-box-content {
+  padding-top : 1em;
+  word-wrap: break-word;
+}
+
+.op-header-subject, .post-header-subject {
+  color: #A0AAAE !important
+}

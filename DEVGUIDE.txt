@@ -1,0 +1,21 @@
+Couple key concepts:
+
+1st) You'll notice that context and storage are passed to any function that touches the state of the imageboard. It's important that with any initialization functions you resolve a new promise (not Promise.resolve!) with the context, as this ensures that the rest of the functions will all be working on the *reference* to the context, rather than a *copy*. I found this out through a lot of trial and error, learn from my mistakes.
+
+2nd) Templates are based off of the sprintf syntax. If you have a % anywhere in your template, it will throw an unexpected token error when parsing. Get around this by doubling up on them, %%.
+
+3rd) Plugins have a handful of properties that can modify the boards. Notably, they have context, route, middleware, and templateInjection modifiers. Templates that support template injection should always have $1%s reserved for that injection somewhere in the <head> tag. 
+
+4th) node-persist is fast. Really fast. Don't be afraid to commit your state to disk when writing code that needs to persist across restarts.
+
+
+Some notable TODOs:
+
+Clientside sorting of threads in boards.html doesn't happen. This can be accomplished in the boards.js file in displayBoardThreads by using a threads.sort() with a custom sorting function. Only reason I've not done this yet is because I'm not sure what I should sort on (particularly if there needs to be a new attribute in the thread like a "last post" timestamp).
+
+OP's tripcode isn't highlighted. This should be piss easy, but just takes some javascript to hunt for tripcode divs with the same trip as OP, and I've not gotten around to it at the time of writing.
+
+templateEngine.js is a cluster. It's a poorly ported version of an older script I used, and it adds way too many file watchers, which means theoretically there's a hard limit on the number of templates you can have (templates * plugins that call require('../../templateEngine.js') < maximum file descriptors). The solution is to wrap the whole thing in a class and refactor plugins/main board to use the new object syntax. This is probably one of the more critical things that needs fixing before a 1.0.0 release.
+
+
+If any of the above things strike your fancy, and you've created a solution, feel free to pm me with the files on Riot for now. Git will come later.

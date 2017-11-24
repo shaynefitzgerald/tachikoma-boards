@@ -1,0 +1,16 @@
+{
+  "name" : "urlencoded",
+  "author" : "0284",
+  "version" : "1.0.0",
+  "provides" : ["middleware"],
+  "middleware" : [
+      {
+        "function" : "urlencoded",
+        "method" : "post",
+        "route" : "*",
+        "explicit" : false,
+        "important" : true
+      }
+    ],
+  "pluginDependencies" : []
+}

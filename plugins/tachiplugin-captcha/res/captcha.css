@@ -1,0 +1,16 @@
+
+.captcha-wrapper {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+.captcha-form {
+  border-bottom: solid 1px;
+  border-top: solid 1px;
+}
+textarea.black, input.black {
+  background-color: #0f1418;
+}
+.captcha-image {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}

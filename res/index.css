@@ -1,0 +1,10 @@
+.index-panel, .post-preview-box {
+  padding: 2em;
+  border-radius: 10px;
+  background-color: #050B10;
+  color: #fff;
+}
+.post-preview {
+  padding-bottom: 1em;
+  padding-top: 1em;
+}

@@ -1,0 +1,63 @@
+<html>
+
+<head>
+  <title>tachikoma-boards - /%2$s/</title>
+  <link rel='stylesheet' href='/res/pure-min.css' />
+  <link rel='stylesheet' href='/res/main.css' />
+  <link rel='stylesheet' href='/res/board.css' />
+  <link rel='stylesheet' href='/res/%2$s/board.css' />
+  <script src='/res/jquery-3.2.1.min.js'></script>
+  <script src='/res/main.js'></script>
+  <script src='/res/board.js'></script>
+  <script src='/res/%2$s/board.js'></script>
+  %1$s
+</head>
+
+<body>
+  <div class='error-banner-wrapper' hidden="true">
+    <div class='error-banner'>
+      <span class='error-banner-text'></span>
+      <img src='/res/x-button-error.png' class='error-banner-exit' />
+    </div>
+  </div>
+  <div class='location-anchor' data-board='%2$s'></div>
+  <div class='template thread-preview-wrapper'>
+    <div class='thread-preview pure-g'>
+      <div class='pure-u-1-4 thread-preview-thread'>Post #<span class='thread-preview-thread'></span></div>
+      <div class='pure-u-1-2 thread-preview-tripcode'>Anonymous</div>
+      <div class='pure-u-1-4 thread-preview-replies'>Replies: <span class='thread-preview-replies'></span></div>
+      <div class='pure-u-1-1 thread-preview-timestamp'></div>
+      <div class='pure-u-1 thread-preview-body'>
+        <div class='thread-preview-subject-wrapper'>
+          <span class='thread-preview-subject'></span>
+          <br />
+        </div><span class='thread-preview-content'></span>
+      </div>
+
+    </div>
+  </div>
+  <div class='template empty-board pure-u-1'>There's nothing here.<br />Why don't you be the first?</div>
+  <div class='site-header'></div>
+  <div class='pure-g site-body'>
+    <div class='pure-u-1-3'>&nbsp;</div>
+    <div class='pure-u-1-3'>
+      <div class='new-thread-anchor'>
+        <form class='pure-form' method='POST' action='/%2$s/new'>
+          <h3>Create a Thread</h3>
+          <fieldset class='pure-group'>
+            <input type='text' class='pure-input-1 subject-box black' name='subject' placeholder="Subject" />
+            <input type='email' class='pure-input-1 email-box black' name='email' placeholder="Email" />
+            <input type='password' class='pure-input-1 tripcode-box black' name='trip' placeholder="Tripcode" />
+          </fieldset>
+          <textarea class='pure-input-1 black reply-box' name='content' placeholder="(Maximum 6000 characters)"></textarea>
+          <button type='submit' class='pure-button pure-button-primary submit'>Post Thread</button>
+        </form>
+      </div>
+    </div>
+    <div class='pure-u-1 spacer'>&nbsp;</div>
+  </div>
+  <div class='spacer'></div>
+  <div class='site-footer'></div>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+{
+  "name": "captcha",
+  "author": "0284",
+  "version": "0.7.0",
+  "provides": ["routes", "middleware", "templateInjection"],
+  "middleware": [{
+      "function": "useOTK",
+      "method": "post",
+      "route": "/:board/new",
+      "explicit": true
+    },
+    {
+      "function": "useOTK",
+      "method": "post",
+      "route": "/:board/:thread/reply",
+      "explicit": true
+    }
+  ],
+  "templateInjection" : [
+    {
+      "function" : "captchaResourceLink",
+      "method" : "get",
+      "route" : "/:board",
+      "explicit" : true
+    },
+    {
+      "function" : "captchaResourceLink",
+      "method" : "get",
+      "route" : "/:board/:thread",
+      "explicit" : true
+    }
+  ],
+  "pluginDependencies": ["urlencoded:1.0.0"],
+  "captchaConfig" : {
+      "fileMode" : 0,
+      "background" : "#050B10",
+      "color" : "#ffffff",
+      "noise" : false,
+      "noiseColor" : "#ffffff",
+      "complexity" : 2,
+      "height" : 45,
+      "spacing" : 3
+  }
+}
